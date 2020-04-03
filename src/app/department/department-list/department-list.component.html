@@ -1,0 +1,17 @@
+
+<div class="container">
+  <h3 class="text-center">
+    Department List!
+  </h3>
+  <ul class="list-group">
+
+    <li (click)="onSelect(department)" *ngFor="let department of departments ; even as e" [class]=" e ? green : blue" [class.selected] = "isSelected(department)" >
+  
+      <span lass="badge badge-primary badge-pill">{{department.id}}</span> {{department.name}}
+  
+    </li>
+  
+  </ul>
+  
+
+</div>

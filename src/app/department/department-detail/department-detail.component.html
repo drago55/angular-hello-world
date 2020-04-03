@@ -1,0 +1,16 @@
+<div class="text-center">
+
+    <h3>You selected department id : {{departmentId}}</h3>
+    {{department | json}}
+  
+    
+</div>
+<div class="text-center">
+  <div class="col mt-3">
+    <button (click)="goPrevious()" class="btn btn-success my-2 my-sm-0 mr-3">Previous</button> 
+    <button (click)="goNext()" class="btn btn-success my-2 my-sm-0">Next</button>
+  </div>
+  <button (click)="goToDepartmets()" class="btn btn-success my-2 my-sm-0">Go back</button>
+</div>
+
+  

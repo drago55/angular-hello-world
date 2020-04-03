@@ -1,0 +1,33 @@
+<h2>Courses</h2>
+<h2 [class]="successClass">{{"Title : " + title}}</h2>
+
+<ul>
+
+    <li *ngFor="let course of courses">
+        {{course}}
+    </li>
+
+</ul>
+
+<input [id] ="myId" type="text" #myInput placeholder="type message to log" value="">
+
+<button class="btn btn-primary" (click)="logMessage(myInput.value)">Log message from input</button>
+
+<input bind-disabled="isDisabled" id="{{myId}}" type="text" value="drago">
+
+<h2 class="text-special" [class]="successClass">Pratice Angular</h2>
+
+<h2 [class.text-danger]="hasError">Angular has error pratcice</h2>
+
+<h2 [ngClass]="messageClasses">Angular ngClass directive</h2>
+<h2 [style.color]="hasError ? 'red' : 'green'">Angular style binding</h2>
+
+<button class="btn btn-primary" (click)="onClick()">Greet</button>
+
+{{greeting}}
+
+<button class="btn btn-primary" (click)="logEvent($event)">Log event</button>
+
+
+<button class="btn btn-primary" (click)="greetingTwo='Welcome Vishwas'" >Greet two ...</button>
+{{greetingTwo}}

@@ -1,0 +1,56 @@
+<div class="container">
+
+<h2>{{testingAngularPipes}}</h2>
+<h2>{{testingAngularPipes | lowercase}}</h2>
+<h2>{{testingAngularPipes | uppercase}}</h2>
+<h2>{{testingAngularPipes | titlecase}}</h2>
+<h2>{{testingAngularPipes | slice: 7 }}</h2>
+<h2>{{person | json}}</h2>
+<h2>{{3.5678 | number:'1.2-3'}}</h2>
+<h2>{{3.5678 | number:'3.4-5'}}</h2>
+<h2>{{3.5678 | number:'3.1-2'}}</h2>
+<h2>{{0.25 | percent}}</h2>
+<h2>{{0.25 | currency: 'EUR'}}</h2>
+
+<h2>{{date | date :'shortDate'}}</h2>
+<h2>{{date | date :'shortTime'}}</h2>
+  <h2>{{fromAppComponent}}</h2>
+  <button class="btn btn-primary" (click)="fireEvent()"> Send event </button>
+    <div class="row">
+      <input [(ngModel)]="name" type="text">
+      {{name}}
+    </div>
+    <div class="row">
+  <div [ngSwitch]="color">
+      <div *ngSwitchCase="'red'">You have picked red color</div>
+      <div *ngSwitchCase="'blue'">You have picked blue color</div>
+      <div *ngSwitchCase="'green'">You have picked green color</div>
+      <div *ngSwitchDefault>Pick again</div>
+  </div>
+</div>
+
+    <div class="row">
+      <h2 *ngIf="displayName; then thenBlock; else elseBlock">
+         
+      </h2>
+
+      <ng-template #elseBlock>
+        <h2>
+          Name is hidden
+        </h2>
+      </ng-template>
+
+      <ng-template #thenBlock>
+        <h2>
+          Codevolution
+        </h2>
+      </ng-template>
+      
+    </div>
+  
+      <div *ngFor="let color of colors; even as i">
+          <h2>{{i}} {{color}}</h2>        
+      </div>
+
+
+</div>
